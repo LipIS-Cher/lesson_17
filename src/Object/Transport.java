@@ -100,4 +100,12 @@ public abstract class Transport<D extends Driver> implements Competing{
     public void infoCar(){
         System.out.println("Марка - " + getBrand() + ", модель - " + getModel() + ", обьем двигателя - " + getEngVolume());
     }
+
+    public void printType(){
+        if (toString() == null && !toString().isEmpty() && !toString().isBlank()){
+            System.out.println("Данных по транспортному средству недостаточно");
+        } else {
+            System.out.println("Тип транспорта - " + toString());
+        }
+    }
 }
