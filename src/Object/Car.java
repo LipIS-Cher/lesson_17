@@ -38,6 +38,10 @@ public class Car extends Transport<Driver_B>{
         public String getVoiceCommand() {
             return voiceCommand;
         }
+
+        public static String toString(Categories categories) {
+            return categories.getVoiceCommand();
+        }
     }
 
     @Override
@@ -69,38 +73,12 @@ public class Car extends Transport<Driver_B>{
         System.out.println("Максимальная скорость - " + maxSpeed);
     }
 
-
-    public String toString(Categories categories) {
-        switch (categories){
-            case SEDAN:
-                return "Седан";
-            case HATCHBACK:
-                return "Хетчбэк";
-            case COUPE:
-                return "Купе";
-            case UNIVERSAL:
-                return "Универсал";
-            case SUV:
-                return "Внедорожник";
-            case CROSSOVER:
-                return "Кроссовер";
-            case PICKUP:
-                return "Пикап";
-            case VAN:
-                return "Фургон";
-            case MINIVAN:
-                return "Минивэн";
-            default:
-                return "Данные не обработаны";
-        }
-    }
-
     public Categories getType() {
         return type;
     }
 
     @Override
     public String toString() {
-        return toString(type);
+        return Categories.toString(type);
     }
 }

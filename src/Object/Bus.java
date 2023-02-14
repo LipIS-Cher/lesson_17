@@ -40,6 +40,10 @@ public class Bus extends Transport<Driver_D> {
         public String getVoiceCommand() {
             return voiceCommand;
         }
+
+        public static String toString(Categories categories) {
+            return categories.getVoiceCommand();
+        }
     }
 
     @Override
@@ -71,22 +75,7 @@ public class Bus extends Transport<Driver_D> {
         System.out.println("Максимальная скорость - " + maxSpeed);
     }
 
-    public String toString(Categories categories) {
-        switch (categories){
-            case VERY_SMALL:
-                return "особо малая: до 10";
-            case SMALL:
-                return "малая: до 25";
-            case MIDDLE:
-                return "средняя: от 40 до 50";
-            case BIG:
-                return "большая: от 60 до 80";
-            case VERY_BIG:
-                return "особо большая: от 100 до 120";
-            default:
-                return "Данные не обработаны";
-        }
-    }
+
 
     public Categories getType() {
         return type;
@@ -94,6 +83,6 @@ public class Bus extends Transport<Driver_D> {
 
     @Override
     public String toString() {
-        return toString(type);
+        return Categories.toString(type);
     }
 }

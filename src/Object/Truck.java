@@ -33,6 +33,10 @@ public class Truck extends Transport<Driver_C>{
         public String getVoiceCommand() {
             return voiceCommand;
         }
+
+        public static String toString(Categories categories) {
+            return categories.getVoiceCommand();
+        }
     }
 
     @Override
@@ -64,21 +68,8 @@ public class Truck extends Transport<Driver_C>{
         System.out.println("Максимальная скорость - " + maxSpeed);
     }
 
-    public String toString(Categories categories) {
-        switch (categories){
-            case N1:
-                return "Грузоподьемность с полной массой до 3.5 тонн";
-            case N2:
-                return "Грузоподьемность с полной массой от 3.5 до 12 тонн";
-            case N3:
-                return "Грузоподьемность с полной массой свыше 12 тонн";
-            default:
-                return "Данные не обработаны";
-        }
-    }
-
     @Override
     public String toString() {
-        return toString(type);
+        return Categories.toString(type);
     }
 }
