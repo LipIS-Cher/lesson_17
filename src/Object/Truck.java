@@ -34,8 +34,8 @@ public class Truck extends Transport<Driver_C>{
             return voiceCommand;
         }
 
-        public static String toString(Categories categories) {
-            return categories.getVoiceCommand();
+        public String toStringEnum(){
+            return this.voiceCommand;
         }
     }
 
@@ -70,6 +70,6 @@ public class Truck extends Transport<Driver_C>{
 
     @Override
     public String toString() {
-        return Categories.toString(type);
+        return type.toStringEnum();
     }
 }

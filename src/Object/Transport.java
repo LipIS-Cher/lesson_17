@@ -88,14 +88,14 @@ public abstract class Transport<D extends Driver> implements Competing{
         return Objects.hash(brand, model, engVolume);
     }
 
-    @Override
-    public String toString() {
-        return "Transport{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", engVolume='" + engVolume + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Transport{" +
+//                "brand='" + brand + '\'' +
+//                ", model='" + model + '\'' +
+//                ", engVolume='" + engVolume + '\'' +
+//                '}';
+//    }
 
     public void infoCar(){
         System.out.println("Марка - " + getBrand() + ", модель - " + getModel() + ", обьем двигателя - " + getEngVolume());

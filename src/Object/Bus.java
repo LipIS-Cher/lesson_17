@@ -41,8 +41,8 @@ public class Bus extends Transport<Driver_D> {
             return voiceCommand;
         }
 
-        public static String toString(Categories categories) {
-            return categories.getVoiceCommand();
+        public String toStringEnum(){
+            return this.voiceCommand;
         }
     }
 
@@ -83,6 +83,6 @@ public class Bus extends Transport<Driver_D> {
 
     @Override
     public String toString() {
-        return Categories.toString(type);
+        return type.toStringEnum();
     }
 }

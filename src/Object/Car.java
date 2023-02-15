@@ -20,7 +20,7 @@ public class Car extends Transport<Driver_B>{
         VAN ("Фургон"),
         MINIVAN ("Минивэн");
 
-        private final String voiceCommand;
+        public final String voiceCommand;
 
         public static Categories findByVoiceCommand(String voiceCommand){
             for (Categories category: values()) {
@@ -39,8 +39,8 @@ public class Car extends Transport<Driver_B>{
             return voiceCommand;
         }
 
-        public static String toString(Categories categories) {
-            return categories.getVoiceCommand();
+        public String toStringEnum(){
+            return this.voiceCommand;
         }
     }
 
@@ -77,8 +77,8 @@ public class Car extends Transport<Driver_B>{
         return type;
     }
 
-    @Override
-    public String toString() {
-        return Categories.toString(type);
+    public String toString(){
+        return type.toStringEnum();
     }
+
 }

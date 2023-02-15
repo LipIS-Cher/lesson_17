@@ -16,6 +16,7 @@ public class Main {
             infoAll(truck);
             infoAll(bus);
         }
+
     }
 
     public static void infoAll(Transport<?> transport){
