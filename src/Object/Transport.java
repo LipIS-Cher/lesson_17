@@ -67,6 +67,10 @@ public abstract class Transport<D extends Driver> implements Competing{
         }
     }
 
+    public void getDiagnosis() throws IdDriverException {
+
+    }
+
     public D getDriver() {
         return driver;
     }

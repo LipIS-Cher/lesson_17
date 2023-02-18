@@ -4,12 +4,15 @@ public abstract class Driver {
 
     final String FIO;
 
+    final String Category;
+
     private boolean LicenseDriver;
 
     private String seniority;
 
-    public Driver(String FIO, boolean licenseDriver, String seniority) {
+    public Driver(String FIO, String category, boolean licenseDriver, String seniority) {
         this.FIO = FIO;
+        this.Category = category;
         LicenseDriver = licenseDriver;
         this.seniority = seniority;
     }
@@ -22,6 +25,10 @@ public abstract class Driver {
 
     public String getFIO() {
         return FIO;
+    }
+
+    public String getCategory() {
+        return Category;
     }
 
     public boolean isLicenseDriver() {

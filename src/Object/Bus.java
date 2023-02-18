@@ -75,7 +75,8 @@ public class Bus extends Transport<Driver_D> {
         System.out.println("Максимальная скорость - " + maxSpeed);
     }
 
-
+    @Override
+    public void getDiagnosis() throws IdDriverException {}
 
     public Categories getType() {
         return type;

@@ -2,8 +2,8 @@ package Object;
 
 public class Driver_B extends Driver{
 
-    public Driver_B(String FIO, boolean licenseDriver, String seniority) {
-        super(FIO, licenseDriver, seniority);
+    public Driver_B(String FIO, String category, boolean licenseDriver, String seniority) {
+        super(FIO, category, licenseDriver, seniority);
     }
 
     @Override

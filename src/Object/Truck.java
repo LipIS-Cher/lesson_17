@@ -69,6 +69,13 @@ public class Truck extends Transport<Driver_C>{
     }
 
     @Override
+    public void getDiagnosis() throws IdDriverException {
+        if (!(getDriver().getCategory() == "c" || getDriver().getCategory() == "C") || (getDriver().getCategory() == null && !getDriver().getCategory().isEmpty() && !getDriver().getCategory().isBlank())){
+            throw new IdDriverException("Необходимо указать тип прав!");
+        }
+    }
+
+    @Override
     public String toString() {
         return type.toStringEnum();
     }

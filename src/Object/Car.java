@@ -73,6 +73,13 @@ public class Car extends Transport<Driver_B>{
         System.out.println("Максимальная скорость - " + maxSpeed);
     }
 
+    @Override
+    public void getDiagnosis() throws IdDriverException {
+        if (!(getDriver().getCategory() == "b" || getDriver().getCategory() == "B") || (getDriver().getCategory() == null && !getDriver().getCategory().isEmpty() && !getDriver().getCategory().isBlank())){
+            throw new IdDriverException("Необходимо указать тип прав!");
+        }
+    }
+
     public Categories getType() {
         return type;
     }
